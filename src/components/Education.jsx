@@ -1,8 +1,7 @@
 import { useRef } from "react"
 import { EDUCATION } from "../constants"
 import {gsap } from "gsap"
-import { ScrollTrigger } from "gsap/"
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Education = () => {
     const educationRef = useRef(null)
 
