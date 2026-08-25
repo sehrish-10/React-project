@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Noto Sans', sans-serif;
+  color: #EDE7E0;
+}
+
+body {
+  background: linear-gradient(135deg, #1B2430 0%, #151C24 55%, #0D1117 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.bg-image{
+  background-image : url(assets/noise.webp);
+}
