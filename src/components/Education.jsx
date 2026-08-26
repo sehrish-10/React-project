@@ -13,24 +13,26 @@ useEffect(() => {
     const ctx = gsap.context(() => {
         const items = gsap.utils.toArray(".education-item");
 
-        gsap.from(items, {
-            opacity: 0,
-            y: 120,
-            scale: 0.92,
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.35,
-            scrollTrigger: {
-                trigger: educationRef.current,
-                start: "top 80%",
-                toggleActions: "play none none none",
-            },
+        items.forEach((item) => {
+            gsap.from(item, {
+                opacity: 0,
+                y: 80,
+                x: -30,
+                scale: 0.95,
+                rotation: -1.5,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                },
+            });
         });
     }, educationRef);
 
     return () => ctx.revert();
 }, []);
-
 
 
     return (

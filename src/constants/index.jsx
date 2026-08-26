@@ -155,15 +155,13 @@ export const SKILLS = [
 // WORK EXPERIENCE
 export const EXPERIENCES = [
   {
-    yearRange: "2026",
-    role: "Frontend Development",
-    company: "Internship",
+    role: "Frontend Developer Intern",
+    company: "Encova Solution Pvt Limited",
     description:
-      "Worked on frontend development tasks, creating responsive web interfaces using HTML, CSS, JavaScript, React, and Tailwind CSS. Practiced building reusable components and improving user interfaces.",
-    techStack: ["HTML", "CSS", "JavaScript","bootstrap", "React", "Tailwind CSS", "Vercel"],
+      "Worked on developing responsive web interfaces using modern frontend technologies.",
+    techStack: ["HTML", "CSS", "JavaScript","Bootstrap" ,"React", "Tailwind Css", "Git and GitHub", "Vercel"],
   },
 ]
-
 
 // EDUCATION
 

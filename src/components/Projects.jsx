@@ -8,14 +8,15 @@ gsap.registerPlugin(ScrollTrigger)
 const Projects = () => {
   const projectsRef = useRef(null)
 
-  useEffect(() => {
+useEffect(() => {
   const ctx = gsap.context(() => {
     gsap.utils.toArray(".project-card").forEach((card) => {
       gsap.from(card, {
         opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power3.out",
+        y: 80,
+        scale: 0.96,
+        duration: 1.2,
+        ease: "power2.out",
 
         scrollTrigger: {
           trigger: card,
