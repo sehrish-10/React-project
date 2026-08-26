@@ -1,9 +1,37 @@
-import { useRef } from "react"
-import { EDUCATION } from "../constants"
-import {gsap } from "gsap"
+import { useRef, useEffect } from "react";
+import { EDUCATION } from "../constants";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Education = () => {
-    const educationRef = useRef(null)
+    const educationRef = useRef(null);
+
+
+useEffect(() => {
+    const ctx = gsap.context(() => {
+        const items = gsap.utils.toArray(".education-item");
+
+        gsap.from(items, {
+            opacity: 0,
+            y: 120,
+            scale: 0.92,
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.35,
+            scrollTrigger: {
+                trigger: educationRef.current,
+                start: "top 80%",
+                toggleActions: "play none none none",
+            },
+        });
+    }, educationRef);
+
+    return () => ctx.revert();
+}, []);
+
+
 
     return (
         <section
@@ -20,7 +48,7 @@ const Education = () => {
                     {EDUCATION.map((edu) => (
                         <div
                             key={edu.id}
-                            className="rounded-xl border border-[#C97B4A]/30 bg-white/5 p-6 backdrop-blur-sm"
+                            className="education-item rounded-xl border border-[#C97B4A]/30 bg-white/5 p-6 backdrop-blur-sm"
                         >
                             <h3 className="mb-2 text-lg text-[#EDE7E0] lg:text-2xl">
                                 {edu.degree}
@@ -29,14 +57,20 @@ const Education = () => {
                             <h4 className="text-lg font-medium text-[#EDE7E0] lg:text-xl">
                                 {edu.institution}
                             </h4>
-                            <p className="text-sm text-[#C97B4A] lg:text-base">{edu.duration}</p>
-                            <p className="mt-4 text-[#A8AEB8]">{edu.description}</p>
+
+                            <p className="text-sm text-[#C97B4A] lg:text-base">
+                                {edu.duration}
+                            </p>
+
+                            <p className="mt-4 text-[#A8AEB8]">
+                                {edu.description}
+                            </p>
                         </div>
                     ))}
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Education
+export default Education;
