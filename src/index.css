@@ -1,16 +1,62 @@
 @import "tailwindcss";
-
-:root {
-  font-family: 'Noto Sans', sans-serif;
-  color: #EDE7E0;
+html {
+  height: 100%;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
 }
 
 body {
-  background: linear-gradient(135deg, #1B2430 0%, #151C24 55%, #0D1117 100%);
+  margin: 0;
+  background:
+    linear-gradient(
+      135deg,
+      var(--bg-primary) 0%,
+      var(--bg-secondary) 55%,
+      var(--bg-primary) 100%
+    );
   background-attachment: fixed;
-  min-height: 100vh;
+  color: var(--text-primary);
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
-.bg-image{
-  background-image : url(assets/noise.webp);
+.light-theme {
+  --bg-primary: #F4F1EA;
+  --bg-secondary: #E6E1D3;
+  --text-primary: #2F332B;
+  --text-secondary: #6E7A5E;
+  --accent: #7F9457;
+  --accent-light: #A6B87F;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --border: rgba(127, 148, 87, 0.25);
+  --nav-bg: rgba(244, 241, 234, 0.7);
+}
+
+.dark-theme {
+  --bg-primary: #111923;
+  --bg-secondary: #18222e;
+  --text-primary: #EDE7E0;
+  --text-secondary: #A8AEB8;
+  --accent: #C97B4A;
+  --accent-light: #E0A87E;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border: rgba(201, 123, 74, 0.3);
+  --nav-bg: rgba(13, 17, 23, 0.65);
+}
+
+.bg-image {
+  background-image: url(assets/noise.webp);
+}
+
+.snap-section {
+  min-height: 100vh;
+  height: auto;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+  overflow: visible;
+}
+.footer-section {
+  scroll-snap-align: start;
 }

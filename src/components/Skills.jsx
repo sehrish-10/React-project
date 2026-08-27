@@ -20,7 +20,9 @@ const Skills = () => {
         scrollTrigger: {
           trigger: skillsRef.current,
           start: "top 80%",
-          toggleActions: "play none none none",
+          // toggleActions: "play none none none",
+
+          toggleActions: "restart none restart none",
         },
       })
     }, skillsRef)
@@ -35,25 +37,34 @@ const Skills = () => {
       ref={skillsRef}
     >
       <div className="px-4">
-        <h2 className="mb-8 text-center text-3xl font-medium text-[#EDE7E0] lg:text-4xl">
+
+        {/* Heading */}
+        <h2 className="mb-8 text-center text-3xl font-medium text-[var(--text-primary)] lg:text-4xl">
           Skills
         </h2>
 
+        {/* Skills */}
         <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+
           {SKILLS.map((skill, index) => (
             <div
               key={index}
               className="skill-item flex flex-col items-center text-center"
             >
+
+              {/* Icon */}
               <div className="mb-4 text-5xl">
                 {skill.icon}
               </div>
 
-              <h3 className="mb-2 text-lg font-medium text-[#EDE7E0] lg:text-xl">
+              {/* Skill Name */}
+              <h3 className="mb-2 text-lg font-medium text-[var(--text-primary)] lg:text-xl">
                 {skill.name}
               </h3>
+
             </div>
           ))}
+
         </div>
       </div>
     </section>

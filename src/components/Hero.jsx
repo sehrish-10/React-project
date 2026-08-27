@@ -98,30 +98,34 @@ const Hero = () => {
       className="flex min-h-screen flex-col items-center justify-center gap-4 lg:gap-6"
     >
       <div className="mt-8 lg:mt-20">
-        <h1 className="hero-title text-4xl uppercase text-[#EDE7E0] lg:text-7xl">
+
+        <h1 className="hero-title text-4xl uppercase text-[var(--text-primary)] lg:text-7xl">
           {PROFILE.name}
         </h1>
 
-        <h2 className="hero-subheading bg-gradient-to-r from-[#C97B4A] to-[#E0A87E] bg-clip-text text-center text-2xl tracking-tighter text-transparent">
+        <h2 className="hero-subheading bg-gradient-to-r from-[var(--accent)] to-[var(--accent-light)] bg-clip-text text-center text-2xl tracking-tighter text-transparent">
           {PROFILE.role}
         </h2>
+
       </div>
 
-      <p className="hero-text max-w-2xl p-2 text-center text-xl tracking-tighter text-[#A8AEB8] lg:text-2xl">
+      <p className="hero-text max-w-2xl p-2 text-center text-xl tracking-tighter text-[var(--text-secondary)] lg:text-2xl">
         {PROFILE.subheading}
       </p>
 
       <div className="hero-btn-wrap mb-6">
+
         <a
           href="/cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
-          className="hero-btn flex items-center gap-1 rounded-full border border-[#C97B4A]/50 bg-[#C97B4A]/10 px-4 py-2 tracking-tighter text-[#EDE7E0] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C97B4A] hover:bg-[#C97B4A] hover:text-white hover:shadow-lg hover:shadow-[#C97B4A]/30"
+          className="hero-btn flex items-center gap-1 rounded-full border border-[var(--accent)]/50 bg-[var(--accent)]/10 px-4 py-2 tracking-tighter text-[var(--text-primary)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-white hover:shadow-lg hover:shadow-[var(--accent)]/30"
         >
           <span>Download Resume</span>
           <RiArrowRightUpLine size={18} />
         </a>
+
       </div>
 
       <img
@@ -129,8 +133,9 @@ const Hero = () => {
         alt={PROFILE.name}
         width={400}
         height={400}
-        className="hero-img rounded-3xl border border-[#C97B4A]/40 p-1"
+        className="hero-img rounded-3xl border border-[var(--accent)]/40 p-1"
       />
+
     </section>
   )
 }
