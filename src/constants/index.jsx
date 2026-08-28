@@ -50,7 +50,7 @@ export const PROJECTS = [
     techStack: ["HTML", "CSS"],
     imgSrc: project2,
     github: "https://github.com/sehrish-10/Landing-page",
-    live: "http://127.0.0.1:5501/index.html",
+    live:  "https://landing-page-seven-murex-67.vercel.app/",
   },
 
   {
@@ -61,7 +61,7 @@ export const PROJECTS = [
     techStack: ["HTML", "CSS", "JavaScript"],
     imgSrc: project4,
     github: "https://github.com/sehrish-10/Tic-Tac-Toe-Game",
-    live: "http://127.0.0.1:5500/index.html",
+    live: "http://tic-tac-toe-game-lyart-rho.vercel.app",
   },
 
   {
@@ -72,7 +72,7 @@ export const PROJECTS = [
     techStack: ["HTML", "CSS", "JavaScript"],
     imgSrc: project3,
     github: "https://github.com/sehrish-10/Rock-Paper-scissors-Game",
-    live: "http://127.0.0.1:5500/index.html",
+    live: "http://rock-paper-scissors-game-mu-three.vercel.app",
   },
 
   {
@@ -83,7 +83,7 @@ export const PROJECTS = [
     techStack: ["HTML", "CSS", "JavaScript", "API"],
     imgSrc: project6,
     github: "https://github.com/sehrish-10/Javascript-Full-Course",
-    live: "http://127.0.0.1:5500/index.html",
+    live: "http://javascript-full-course.vercel.app",
   },
 
   {
@@ -94,7 +94,7 @@ export const PROJECTS = [
     techStack: ["HTML", "CSS"],
     imgSrc: project1,
     github: "https://github.com/sehrish-10/CSS-and-HTML-project",
-    live: "http://127.0.0.1:5501/index.html",
+    live: "http://css-and-html-project-hazel.vercel.app",
   },
 
   {
@@ -105,7 +105,7 @@ export const PROJECTS = [
     techStack: ["HTML", "CSS", "Bootstrap"],
     imgSrc: project5,
     github: "https://github.com/sehrish-10/Bootstrap",
-    live: "http://127.0.0.1:5500/index.html",
+    live: "http://bootstrap-ecru-phi.vercel.app",
   },
 ]
 
@@ -127,6 +127,11 @@ export const SKILLS = [
   },
 
   {
+    name: "Bootstrap",
+    icon: <RiBootstrapLine className="text-purple-500" />,
+  },
+
+  {
     name: "React",
     icon: <RiReactjsLine className="text-blue-400" />,
   },
@@ -134,11 +139,6 @@ export const SKILLS = [
   {
     name: "Tailwind CSS",
     icon: <RiCodeSSlashLine className="text-teal-400" />,
-  },
-
-  {
-    name: "Bootstrap",
-    icon: <RiBootstrapLine className="text-purple-500" />,
   },
 
   {
