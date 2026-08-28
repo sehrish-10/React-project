@@ -83,7 +83,7 @@ export const PROJECTS = [
     techStack: ["HTML", "CSS", "JavaScript", "API"],
     imgSrc: project6,
     github: "https://github.com/sehrish-10/Javascript-Full-Course",
-    live: "http://javascript-full-course.vercel.app",
+    live: "http://currency-converter-pink-nu.vercel.app",
   },
 
   {
